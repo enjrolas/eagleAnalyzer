@@ -1,0 +1,33 @@
+Eagle Analyzer is a tool I built to learn more about what electronic
+components hackers use in open-source electronic circuits.  There are
+a couple files here.  Boards.py scrapes github for all .brd and
+associated .sch files (.brd is the file format for circuit layout in
+the popular circuit design software EagleCAD).  It's a little hacky (I
+hardcoded how many pages are in the github search results), but it
+pulls down all the eagle files.  
+
+It's tricky to know if a file is an eagle file without looking inside
+it.  .sch files are quite common in code, so just downloading all the
+.sch files on github will give a lot of noise.  .brd files are less
+common -- apart from eagle, it seems like the naming convention is
+only used for some android code, and not very frequently.  To learn
+the names of the components, though, we need the .sch files.  So, I
+search for .brd files, download those files, and then check to see if
+there's a .sch file with the same filepath.  If so, it's a good bet
+that these are eagle files.
+
+The next thing to do is to make a histogram to count the
+frequency each component is used.  Histogram.py does exactly this.
+Building the histogram itself is a bit tricky, because
+people will give different names to the same components.  For example,
+some people call a resistor 'R' and others call it 'RESISTOR'  -- it
+depends on what library they use and whatever the naming convention
+is.  So, some of this will require smart intervention, but to get
+started, I use the ever-delightful beautifulSoup library to go through the .sch files and look for the <parts> tag,
+Inside that tag are a bunch of <part> tags, each one listing the
+unique parts in the circuit.  Each part has a 'deviceset' parameter
+that's the closest thing to a unique name for a part that we're gonna
+get, so I pull that parameter as the part name.  For each name, I
+check a list of existing names that I've pulled to see if I've already
+seen this name before.  If so, I add one to the number of times I've
+seen this device.  If not, I add the device name to the list.

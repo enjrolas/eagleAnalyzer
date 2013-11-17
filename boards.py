@@ -41,7 +41,7 @@ for files in os.listdir("."):
         downloadedFiles.append(files)
 print downloadedFiles        
 
-for i in range(82):
+for i in range(5,82):
     url="https://github.com/search?p=%d&q=%%2A+extension%%3Abrd&ref=searchresults&type=Code" % (i+1)
     file="%d.html" % i
     if file not in downloadedFiles:
@@ -70,7 +70,9 @@ print len(boardFiles)
 
 for file in boardFiles:
     print file
+    schematicFile=file.replace(".brd", ".sch") #also get the associated schematic file, if it's there.
     print file.split("/")[-1].replace("%20","_")
     download(file,file.split("/")[-1].replace("%20","_"))
+    download(schematicFile,schematicFile.split("/")[-1].replace("%20","_"))
     
 
