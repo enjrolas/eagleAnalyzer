@@ -41,7 +41,7 @@ for files in os.listdir("."):
         downloadedFiles.append(files)
 print downloadedFiles        
 
-for i in range(5,82):
+for i in range(1,100):
     url="https://github.com/search?p=%d&q=%%2A+extension%%3Abrd&ref=searchresults&type=Code" % (i+1)
     file="%d.html" % i
     if file not in downloadedFiles:
@@ -51,9 +51,15 @@ for i in range(5,82):
 rawURL="https://raw.github.com"
 
 downloadedFiles=[]
+downloadedBoardFiles=[]
+downloadedSchematicFiles=[]
 for files in os.listdir("."):
     if files.endswith(".html"):
         downloadedFiles.append(files)
+    if files.endswith(".brd"):
+        downloadedBoardFiles.append(files)
+    if files.endswith(".sch"):
+        downloadedSchematicFiles.append(files)
 print downloadedFiles 
 
 boardFiles=[]
@@ -71,8 +77,16 @@ print len(boardFiles)
 for file in boardFiles:
     print file
     schematicFile=file.replace(".brd", ".sch") #also get the associated schematic file, if it's there.
-    print file.split("/")[-1].replace("%20","_")
-    download(file,file.split("/")[-1].replace("%20","_"))
-    download(schematicFile,schematicFile.split("/")[-1].replace("%20","_"))
+    filename=file.split("/")[-1].replace("%20","_")
+    schematicFilename=schematicFile.split("/")[-1].replace("%20","_")
+    if "eagleAnalyzer" not in file:  # don't get the files that are part of this github repo
+        if filename not in downloadedBoardFiles:
+            download(file,filename)
+        else:
+            print "already have %s" % filename
+        if schematicFilename not in downloadedSchematicFiles:
+            download(schematicFile,schematicFilename)
+        else:
+            print "already have %s" % schematicFilename
     
 

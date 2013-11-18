@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.4">
+<drawing>
+<settings>
+<setting alwaysvectorfont="yes"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.01" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="no"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="no" active="no"/>
+<layer number="95" name="Names" color="7" fill="1" visible="no" active="no"/>
+<layer number="96" name="Values" color="7" fill="1" visible="no" active="no"/>
+<layer number="97" name="Info" color="7" fill="1" visible="no" active="no"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
+</layers>
+<board>
+<plain>
+<wire x1="0" y1="0" x2="10.1602" y2="-0.0254" width="0" layer="20"/>
+<wire x1="10.1602" y1="-0.0254" x2="10.1602" y2="15.2046" width="0" layer="20"/>
+<wire x1="10.1602" y1="15.2046" x2="0" y2="15.23" width="0" layer="20"/>
+<wire x1="0" y1="15.23" x2="0" y2="0" width="0" layer="20"/>
+<text x="1.778" y="10.16" size="1.016" layer="21" ratio="12" rot="R90">GND</text>
+<text x="6.858" y="10.16" size="1.016" layer="21" ratio="12" rot="R90">GLD</text>
+<text x="9.398" y="10.16" size="1.016" layer="21" ratio="12" rot="R90">BLD</text>
+<text x="4.318" y="10.16" size="1.016" layer="21" ratio="12" rot="R90">RLD</text>
+<text x="1.524" y="0.508" size="1.016" layer="21" ratio="12" rot="R90">RGB-LED</text>
+</plain>
+<libraries>
+<library name="bivar-smleds">
+<description>&lt;table border="0" cellpadding="5" cellspacing="0"&gt;
+
+&lt;tr&gt;
+&lt;td bgcolor=#6999D1&gt;
+&lt;font color=#ffffff&gt;
+&lt;b&gt;Indication leds&lt;/b&gt;
+&lt;/tr&gt;
+&lt;/td&gt;
+
+&lt;tr&gt;
+&lt;td&gt;
+&lt;font color=#666666&gt;
+Our LED indication products and solutions facilitate machine to human communication. &lt;br&gt;
+Whether it’s a custom solution or an off-the-shelf standard, our Opto4™ product lines enable design engineers to make moving light from point-to-point practical, easy, efficient, and affordable. &lt;br&gt;
+We work closely with our customers to understand their needs and present options that meet their application requirements.
+&lt;p&gt;
+&lt;b&gt;PRODUCT BRIEFS&lt;/b&gt;&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;Weather Resistant Panel Mount Assemblies
+&lt;li&gt;HT Series- Right Angle Surface Mount LED 
+&lt;li&gt;ORCAdapt™ Complete Light Pipe System 
+&lt;li&gt;PM5-3 Series, 3 Leaded, Bi-Color Panel Mount LED Assembly 
+&lt;li&gt;SMS1105 &amp; SMP2, PLCC2 Surface Mount LEDs 
+&lt;li&gt;SM1204 &amp; SMP6 Series, Surface Mount LEDs
+&lt;li&gt;FLPC2, Plastic Optical Fiber Light Pipe System 
+&lt;li&gt;PMR4 Series, Rectangular Panel Mount
+&lt;/ul&gt;
+&lt;p&gt;
+Ref: &lt;a href="http://www.bivar.com/Products/LEDIndication.aspx"&gt;Link&lt;/a&gt;&lt;br&gt;
+Ref: &lt;a href="http://www.bivar.com/Portals/0/Flash/Catalog/Index.html"&gt;Catalog&lt;/a&gt;
+&lt;p&gt;
+&lt;b&gt;Components&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;SM0603--------Surface Mount Led
+&lt;li&gt;SM0805--------Surface Mount Led
+&lt;li&gt;SM1204--------Surface Mount Led
+&lt;li&gt;SM1204B------Surface Mount Led Bi-color
+&lt;li&gt;SM1206--------Surface Mount Led
+&lt;li&gt;SM1210B------Surface Mount Led Bi-color
+&lt;li&gt;SM1210RGB---Surface Mount Led RGB
+&lt;/ul&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</description>
+<packages>
+<package name="D1210">
+<description>&lt;table border="0" cellpadding="5" cellspacing="0" width="600"&gt;
+
+&lt;tr&gt;
+&lt;td bgcolor=#002D62 colspan="2"&gt;
+&lt;font color=#ffffff&gt;
+&lt;b&gt;1210 SMD BI-LED&lt;/b&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;
+&lt;img src="../../models/leds/SM/png/D1210.png" width="240"&gt;
+&lt;/td&gt;
+&lt;td bgcolor=#ffffff&gt;
+&lt;font color=#666666&gt;
+3.2 mm × 2.7 mm &lt;br&gt; 
+---------------------------------------------------------------
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/table&gt;</description>
+<wire x1="-1.6" y1="1.2" x2="1.6" y2="1.2" width="0.127" layer="51"/>
+<wire x1="1.6" y1="1.2" x2="1.6" y2="-1.2" width="0.127" layer="51"/>
+<wire x1="1.6" y1="-1.2" x2="-1.6" y2="-1.2" width="0.127" layer="51"/>
+<wire x1="-1.6" y1="-1.2" x2="-1.6" y2="1.2" width="0.127" layer="51"/>
+<rectangle x1="-1.6" y1="-1.2" x2="-0.9" y2="1.2" layer="51"/>
+<rectangle x1="0.9" y1="-1.2" x2="1.6" y2="1.2" layer="51"/>
+<wire x1="0.9" y1="1.2" x2="-0.9" y2="1.2" width="0.127" layer="21"/>
+<wire x1="0.8" y1="-1.2" x2="-0.8" y2="-1.2" width="0.127" layer="21"/>
+<text x="-2.1" y="1.5" size="1.016" layer="25" ratio="12">&gt;Name</text>
+<text x="-2.1" y="-2.5" size="1.016" layer="27" ratio="12">&gt;Value</text>
+<wire x1="2.65" y1="0.35" x2="2.65" y2="-0.25" width="0.1524" layer="21"/>
+<smd name="1" x="1.75" y="-0.7" dx="1.5" dy="1" layer="1"/>
+<smd name="2" x="1.75" y="0.7" dx="1.5" dy="1" layer="1"/>
+<smd name="3" x="-1.75" y="-0.7" dx="1.5" dy="1" layer="1"/>
+<smd name="4" x="-1.75" y="0.7" dx="1.5" dy="1" layer="1"/>
+</package>
+</packages>
+</library>
+<library name="te-fixed-resistors">
+<description>&lt;table border="0" cellpadding="5" cellspacing="0"&gt;
+
+&lt;tr&gt;
+&lt;td bgcolor=#aaccff&gt;
+&lt;font color=#ffffff&gt;
+&lt;b&gt;General Purpose Fixed Resistors&lt;/b&gt;
+&lt;/tr&gt;
+&lt;/td&gt;
+
+&lt;tr&gt;
+&lt;td&gt;
+&lt;font color=#666666&gt;
+
+&lt;p&gt;
+Available in SMD with thick film element or leaded packaging with metal film, metal oxide, carbon film, thick film, carbon/ceramic composition or wire elements.&lt;p&gt;
+Ref: &lt;a href="http://www.te.com/catalog/feat/en/s/26891?BML=10576,16366,16368,23809"&gt;Link&lt;/a&gt;
+&lt;p&gt;
+&lt;b&gt;Components&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;CRG-----Thick Film Resistor 1% and 5% 
+&lt;li&gt;CFR-----Carbon Film Fixed Resistor
+&lt;li&gt;LR-------Metal film Fixed Resistor
+&lt;li&gt;TCR-----Trimmable Chip Resistor
+&lt;li&gt;SIL------General Purpose Resistor Network
+&lt;li&gt;CPF-----Thin Film Precision Resistor
+&lt;li&gt;RP73---SMD High Power Resistor
+&lt;li&gt;RN73---SMD High Power Resistor 0.1%
+&lt;li&gt;HOLO--Axial Leaded Precision Resistor
+&lt;/ul&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</description>
+<packages>
+<package name="RESC0603">
+<description>&lt;table border="0" cellpadding="5" cellspacing="0" width="600"&gt;
+
+&lt;tr&gt;
+&lt;td bgcolor=#0173AF colspan="2"&gt;
+&lt;font color=#ffffff&gt;
+&lt;b&gt;Resistor Chip 0603&lt;/b&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;
+&lt;img src="../../models/resistors/RESC/png/RESC0603.png" width="240"&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;font color=#666666&gt;
+ (1608 metric):&lt;br&gt; 
+1.6 mm × 0.8 mm (0.063 in × 0.031 in).&lt;br&gt; 
+Typical power rating for resistors 0.1 watt&lt;br&gt;
+---------------------------------------------------
+&lt;/tr&gt;
+&lt;/td&gt;
+
+&lt;/table&gt;</description>
+<smd name="P$1" x="0.8" y="0" dx="1" dy="1" layer="1"/>
+<smd name="P$2" x="-0.8" y="0" dx="1" dy="1" layer="1"/>
+<wire x1="-0.8" y1="0.4" x2="0.8" y2="0.4" width="0.1" layer="51"/>
+<wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.1" layer="51"/>
+<wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.1" layer="51"/>
+<wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.1" layer="51"/>
+<rectangle x1="-0.8" y1="-0.4" x2="-0.5" y2="0.4" layer="51"/>
+<rectangle x1="0.5" y1="-0.4" x2="0.8" y2="0.4" layer="51"/>
+<text x="-1.4" y="0.773" size="1.016" layer="25" font="vector" ratio="12">&gt;Name</text>
+<text x="-1.4" y="-1.819" size="1.016" layer="27" font="vector" ratio="12">&gt;Value</text>
+<wire x1="0.2" y1="0.4" x2="-0.2" y2="0.4" width="0.127" layer="21"/>
+<wire x1="-0.2" y1="-0.4" x2="0.2" y2="-0.4" width="0.127" layer="21"/>
+</package>
+</packages>
+</library>
+<library name="wurth-pin-socket-headers">
+<description>&lt;table border="0" cellpadding="5" cellspacing="0"&gt;
+
+&lt;tr&gt;
+&lt;td bgcolor=#DE6C72&gt;
+&lt;font color=#ffffff&gt;
+&lt;b&gt;Pin and Socket Headers&lt;/b&gt;
+&lt;/tr&gt;
+&lt;/td&gt;
+
+&lt;tr&gt;
+&lt;td&gt;
+&lt;font color=#666666&gt;
+
+&lt;p&gt;
+Board to board conector WR-PHD series. Avaliable in dual and single pin strip, also you can find straigh and raight angle presentation. some series inlcude 2.54mm, 2.0mm and 1.27mm pitch. Asemblies could either thru hole or SMD.
+&lt;p&gt;
+Ref: &lt;a href="http://katalog.we-online.de/en/em/search/WERI_Steckverbinder/Board-to-Board_"&gt;Link&lt;/a&gt;
+&lt;p&gt;
+&lt;b&gt;Components&lt;/b&gt;
+&lt;ul&gt;
+&lt;li&gt;613 xxx 1111 21------Pin Header Straight Post
+&lt;li&gt;613 xxx 1110 21------Pin Header Right Angle
+&lt;li&gt;613 xxx 1118 21------Socket Header Straight Post
+&lt;li&gt;613 xxx 11431 21-----Socket Header Right Angle
+&lt;/ul&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</description>
+<packages>
+<package name="PHSP254P1016X254X1154-4S">
+<description>&lt;table border="0" cellpadding="5" cellspacing="0" width="600"&gt;
+
+&lt;tr&gt;
+&lt;td bgcolor=#E3000B colspan="2"&gt;
+&lt;font color=#ffffff&gt;
+&lt;b&gt;4 Pin Header Straight Post 2.54Pitch&lt;/b&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;
+&lt;img src="models/headers/PHSP254PS/png/WURTH_PHSP254P1016X254X1154-4S.png" width="240"&gt;
+&lt;/td&gt;
+&lt;td bgcolor=#ffffff&gt;
+&lt;font color=#666666&gt;
+ 10.16mm L x 2.54mm W x 11.54mm H &lt;br&gt;
+----------------------------------------------
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/table&gt;</description>
+<wire x1="-1.27" y1="1.26" x2="-1.27" y2="-1.27" width="0.127" layer="51"/>
+<wire x1="-1.27" y1="-1.27" x2="8.89" y2="-1.27" width="0.127" layer="51"/>
+<wire x1="8.89" y1="-1.27" x2="8.89" y2="1.26" width="0.127" layer="51"/>
+<wire x1="8.89" y1="1.26" x2="-1.27" y2="1.26" width="0.127" layer="51"/>
+<pad name="1" x="0" y="0" drill="1.1"/>
+<text x="-1.4327" y="1.5596" size="1.016" layer="25" ratio="12">&gt;NAME</text>
+<text x="-1.4327" y="-2.7027" size="1.016" layer="27" ratio="12">&gt;VALUE</text>
+<rectangle x1="-0.3175" y1="-0.3175" x2="0.3175" y2="0.3175" layer="51"/>
+<pad name="2" x="2.54" y="0" drill="1.1"/>
+<rectangle x1="2.2225" y1="-0.3175" x2="2.8575" y2="0.3175" layer="51"/>
+<rectangle x1="4.7625" y1="-0.3175" x2="5.3975" y2="0.3175" layer="51"/>
+<pad name="3" x="5.08" y="0" drill="1.1"/>
+<pad name="4" x="7.62" y="0" drill="1.1"/>
+<rectangle x1="7.3025" y1="-0.3175" x2="7.9375" y2="0.3175" layer="51"/>
+</package>
+</packages>
+</library>
+</libraries>
+<attributes>
+</attributes>
+<variantdefs>
+</variantdefs>
+<classes>
+<class number="0" name="default" width="0" drill="0">
+</class>
+</classes>
+<designrules name="default *">
+<description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
+&lt;p&gt;
+Die Standard-Design-Rules sind so gewählt, dass sie für 
+die meisten Anwendungen passen. Sollte ihre Platine 
+besondere Anforderungen haben, treffen Sie die erforderlichen
+Einstellungen hier und speichern die Design Rules unter 
+einem neuen Namen ab.</description>
+<description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
+&lt;p&gt;
+The default Design Rules have been set to cover
+a wide range of applications. Your particular design
+may have different requirements, so please make the
+necessary adjustments and save your customized
+design rules under a new name.</description>
+<param name="layerSetup" value="(1*16)"/>
+<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
+<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
+<param name="mdWireWire" value="8mil"/>
+<param name="mdWirePad" value="8mil"/>
+<param name="mdWireVia" value="8mil"/>
+<param name="mdPadPad" value="8mil"/>
+<param name="mdPadVia" value="8mil"/>
+<param name="mdViaVia" value="8mil"/>
+<param name="mdSmdPad" value="8mil"/>
+<param name="mdSmdVia" value="8mil"/>
+<param name="mdSmdSmd" value="8mil"/>
+<param name="mdViaViaSameLayer" value="8mil"/>
+<param name="mnLayersViaInSmd" value="2"/>
+<param name="mdCopperDimension" value="10mil"/>
+<param name="mdDrill" value="8mil"/>
+<param name="mdSmdStop" value="0mil"/>
+<param name="msWidth" value="10mil"/>
+<param name="msDrill" value="24mil"/>
+<param name="msMicroVia" value="9.99mm"/>
+<param name="msBlindViaRatio" value="0.5"/>
+<param name="rvPadTop" value="0.25"/>
+<param name="rvPadInner" value="0.25"/>
+<param name="rvPadBottom" value="0.25"/>
+<param name="rvViaOuter" value="0.25"/>
+<param name="rvViaInner" value="0.25"/>
+<param name="rvMicroViaOuter" value="0.25"/>
+<param name="rvMicroViaInner" value="0.25"/>
+<param name="rlMinPadTop" value="10mil"/>
+<param name="rlMaxPadTop" value="20mil"/>
+<param name="rlMinPadInner" value="10mil"/>
+<param name="rlMaxPadInner" value="20mil"/>
+<param name="rlMinPadBottom" value="10mil"/>
+<param name="rlMaxPadBottom" value="20mil"/>
+<param name="rlMinViaOuter" value="8mil"/>
+<param name="rlMaxViaOuter" value="20mil"/>
+<param name="rlMinViaInner" value="8mil"/>
+<param name="rlMaxViaInner" value="20mil"/>
+<param name="rlMinMicroViaOuter" value="4mil"/>
+<param name="rlMaxMicroViaOuter" value="20mil"/>
+<param name="rlMinMicroViaInner" value="4mil"/>
+<param name="rlMaxMicroViaInner" value="20mil"/>
+<param name="psTop" value="-1"/>
+<param name="psBottom" value="-1"/>
+<param name="psFirst" value="-1"/>
+<param name="psElongationLong" value="100"/>
+<param name="psElongationOffset" value="100"/>
+<param name="mvStopFrame" value="1"/>
+<param name="mvCreamFrame" value="0"/>
+<param name="mlMinStopFrame" value="4mil"/>
+<param name="mlMaxStopFrame" value="4mil"/>
+<param name="mlMinCreamFrame" value="0mil"/>
+<param name="mlMaxCreamFrame" value="0mil"/>
+<param name="mlViaStopLimit" value="0mil"/>
+<param name="srRoundness" value="0"/>
+<param name="srMinRoundness" value="0mil"/>
+<param name="srMaxRoundness" value="0mil"/>
+<param name="slThermalIsolate" value="10mil"/>
+<param name="slThermalsForVias" value="0"/>
+<param name="dpMaxLengthDifference" value="10mm"/>
+<param name="dpGapFactor" value="2.5"/>
+<param name="checkGrid" value="0"/>
+<param name="checkAngle" value="0"/>
+<param name="checkFont" value="1"/>
+<param name="checkRestrict" value="1"/>
+<param name="useDiameter" value="13"/>
+<param name="maxErrors" value="50"/>
+</designrules>
+<autorouter>
+<pass name="Default">
+<param name="RoutingGrid" value="50mil"/>
+<param name="tpViaShape" value="round"/>
+<param name="PrefDir.1" value="|"/>
+<param name="PrefDir.2" value="0"/>
+<param name="PrefDir.3" value="0"/>
+<param name="PrefDir.4" value="0"/>
+<param name="PrefDir.5" value="0"/>
+<param name="PrefDir.6" value="0"/>
+<param name="PrefDir.7" value="0"/>
+<param name="PrefDir.8" value="0"/>
+<param name="PrefDir.9" value="0"/>
+<param name="PrefDir.10" value="0"/>
+<param name="PrefDir.11" value="0"/>
+<param name="PrefDir.12" value="0"/>
+<param name="PrefDir.13" value="0"/>
+<param name="PrefDir.14" value="0"/>
+<param name="PrefDir.15" value="0"/>
+<param name="PrefDir.16" value="-"/>
+<param name="cfVia" value="8"/>
+<param name="cfNonPref" value="5"/>
+<param name="cfChangeDir" value="2"/>
+<param name="cfOrthStep" value="2"/>
+<param name="cfDiagStep" value="3"/>
+<param name="cfExtdStep" value="0"/>
+<param name="cfBonusStep" value="1"/>
+<param name="cfMalusStep" value="1"/>
+<param name="cfPadImpact" value="4"/>
+<param name="cfSmdImpact" value="4"/>
+<param name="cfBusImpact" value="0"/>
+<param name="cfHugging" value="3"/>
+<param name="cfAvoid" value="4"/>
+<param name="cfPolygon" value="10"/>
+<param name="cfBase.1" value="0"/>
+<param name="cfBase.2" value="1"/>
+<param name="cfBase.3" value="1"/>
+<param name="cfBase.4" value="1"/>
+<param name="cfBase.5" value="1"/>
+<param name="cfBase.6" value="1"/>
+<param name="cfBase.7" value="1"/>
+<param name="cfBase.8" value="1"/>
+<param name="cfBase.9" value="1"/>
+<param name="cfBase.10" value="1"/>
+<param name="cfBase.11" value="1"/>
+<param name="cfBase.12" value="1"/>
+<param name="cfBase.13" value="1"/>
+<param name="cfBase.14" value="1"/>
+<param name="cfBase.15" value="1"/>
+<param name="cfBase.16" value="0"/>
+<param name="mnVias" value="20"/>
+<param name="mnSegments" value="9999"/>
+<param name="mnExtdSteps" value="9999"/>
+<param name="mnRipupLevel" value="10"/>
+<param name="mnRipupSteps" value="100"/>
+<param name="mnRipupTotal" value="100"/>
+</pass>
+<pass name="Follow-me" refer="Default" active="yes">
+</pass>
+<pass name="Busses" refer="Default" active="yes">
+<param name="cfNonPref" value="4"/>
+<param name="cfBusImpact" value="4"/>
+<param name="cfHugging" value="0"/>
+<param name="mnVias" value="0"/>
+</pass>
+<pass name="Route" refer="Default" active="yes">
+</pass>
+<pass name="Optimize1" refer="Default" active="yes">
+<param name="cfVia" value="99"/>
+<param name="cfExtdStep" value="10"/>
+<param name="cfHugging" value="1"/>
+<param name="mnExtdSteps" value="1"/>
+<param name="mnRipupLevel" value="0"/>
+</pass>
+<pass name="Optimize2" refer="Optimize1" active="yes">
+<param name="cfNonPref" value="0"/>
+<param name="cfChangeDir" value="6"/>
+<param name="cfExtdStep" value="0"/>
+<param name="cfBonusStep" value="2"/>
+<param name="cfMalusStep" value="2"/>
+<param name="cfPadImpact" value="2"/>
+<param name="cfSmdImpact" value="2"/>
+<param name="cfHugging" value="0"/>
+</pass>
+<pass name="Optimize3" refer="Optimize2" active="yes">
+<param name="cfChangeDir" value="8"/>
+<param name="cfPadImpact" value="0"/>
+<param name="cfSmdImpact" value="0"/>
+</pass>
+<pass name="Optimize4" refer="Optimize3" active="yes">
+<param name="cfChangeDir" value="25"/>
+</pass>
+</autorouter>
+<elements>
+<element name="D1" library="bivar-smleds" package="D1210" value="" x="5.334" y="3.556" smashed="yes" rot="R180">
+<attribute name="FUTURE" value="" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="AVNET" value="" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="ARROW" value="" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DESCRIPTION" value="LED, SMD, 1210, 4 Leads, Tri-Color, Super Red/HE Green/Super Blue, Water Clear Lens, 130 Deg Viewing Angle" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="EAGLEUP" value="D1210" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DATASHEET" value="http://www.bivar.com/Images/Cart/SM1210RGB.pdf" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MOUSER" value="749-SM1210RGB" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NEWARK" value="92C8134" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="AVRG-PRICE" value="2.46" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DIGIKEY" value="492-1243-2-ND" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OCTOPART-LINK" value="http://octopart.com/sm1210rgb-bivar-2191590" x="-11.176" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="5.056" y="2.354" size="0.8128" layer="25" ratio="12" rot="R270"/>
+<attribute name="VALUE" x="7.434" y="6.056" size="1.016" layer="27" ratio="12" rot="R180"/>
+</element>
+<element name="R1" library="te-fixed-resistors" package="RESC0603" value="390" x="8.89" y="8.128" smashed="yes" rot="R90">
+<attribute name="DESCRIPTION" value="Resistores de película gruesa - SMD 0603 390Ohms 1/10W 50V " x="11.43" y="23.368" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="EAGLEUP" value="RESC0603" x="11.43" y="23.368" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="" x="11.43" y="23.368" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DATASHEET" value="http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&amp;DocId=Data+Sheet%7F1773204%7FH%7Fpdf%7FEnglish%7FENG_DS_1773204_H.pdf%7F1623095-1" x="11.43" y="23.368" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MOUSER" value="279-CRG0603F390R " x="11.43" y="23.368" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="AVRG-PRICE" value="0.1" x="11.43" y="23.368" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OCTOPART-LINK" value="http://octopart.com/crg0603f390r-tyco+electronics-16077369" x="11.43" y="23.368" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="8.117" y="6.728" size="0.8128" layer="25" font="vector" ratio="12" rot="R90"/>
+<attribute name="VALUE" x="10.709" y="6.728" size="1.016" layer="27" font="vector" ratio="12" rot="R90"/>
+</element>
+<element name="J1" library="wurth-pin-socket-headers" package="PHSP254P1016X254X1154-4S" value="" x="1.27" y="13.97" smashed="yes">
+<attribute name="FUTURE" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="AVNET" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="ARROW" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="EAGLEUP" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="DATASHEET" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="NEWARK" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="AVRG-PRICE" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="OCTOPART-LINK" value="" x="24.13" y="7.62" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="3.0124" y="10.7593" size="0.8128" layer="25" ratio="12" rot="R90"/>
+<attribute name="VALUE" x="-0.1627" y="11.2673" size="1.016" layer="27" ratio="12"/>
+</element>
+<element name="R2" library="te-fixed-resistors" package="RESC0603" value="390" x="6.35" y="8.128" smashed="yes" rot="R90">
+<attribute name="DESCRIPTION" value="Resistores de película gruesa - SMD 0603 390Ohms 1/10W 50V " x="8.89" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="EAGLEUP" value="RESC0603" x="8.89" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="" x="8.89" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DATASHEET" value="http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&amp;DocId=Data+Sheet%7F1773204%7FH%7Fpdf%7FEnglish%7FENG_DS_1773204_H.pdf%7F1623095-1" x="8.89" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MOUSER" value="279-CRG0603F390R " x="8.89" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="AVRG-PRICE" value="0.1" x="8.89" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OCTOPART-LINK" value="http://octopart.com/crg0603f390r-tyco+electronics-16077369" x="8.89" y="27.178" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="5.577" y="6.728" size="0.8128" layer="25" font="vector" ratio="12" rot="R90"/>
+<attribute name="VALUE" x="8.169" y="6.728" size="1.016" layer="27" font="vector" ratio="12" rot="R90"/>
+</element>
+<element name="R3" library="te-fixed-resistors" package="RESC0603" value="390" x="3.81" y="8.128" smashed="yes" rot="R90">
+<attribute name="DESCRIPTION" value="Resistores de película gruesa - SMD 0603 390Ohms 1/10W 50V " x="6.35" y="30.988" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="EAGLEUP" value="RESC0603" x="6.35" y="30.988" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER" value="" x="6.35" y="30.988" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DATASHEET" value="http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&amp;DocId=Data+Sheet%7F1773204%7FH%7Fpdf%7FEnglish%7FENG_DS_1773204_H.pdf%7F1623095-1" x="6.35" y="30.988" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MOUSER" value="279-CRG0603F390R " x="6.35" y="30.988" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="AVRG-PRICE" value="0.1" x="6.35" y="30.988" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="OCTOPART-LINK" value="http://octopart.com/crg0603f390r-tyco+electronics-16077369" x="6.35" y="30.988" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="3.037" y="6.728" size="0.8128" layer="25" font="vector" ratio="12" rot="R90"/>
+<attribute name="VALUE" x="5.629" y="6.728" size="1.016" layer="27" font="vector" ratio="12" rot="R90"/>
+</element>
+</elements>
+<signals>
+<signal name="+3V3">
+<contactref element="D1" pad="1"/>
+<contactref element="J1" pad="1"/>
+<wire x1="1.27" y1="13.97" x2="1.27" y2="4.826" width="0.3048" layer="1"/>
+<wire x1="1.27" y1="4.826" x2="1.778" y2="4.318" width="0.3048" layer="1"/>
+<wire x1="1.778" y1="4.318" x2="3.522" y2="4.318" width="0.3048" layer="1"/>
+<wire x1="3.522" y1="4.318" x2="3.584" y2="4.256" width="0.3048" layer="1"/>
+</signal>
+<signal name="N$1">
+<contactref element="D1" pad="2"/>
+<contactref element="R1" pad="P$2"/>
+<wire x1="3.584" y1="2.856" x2="3.584" y2="2.004" width="0.3048" layer="1"/>
+<wire x1="3.584" y1="2.004" x2="3.81" y2="1.778" width="0.3048" layer="1"/>
+<wire x1="3.81" y1="1.778" x2="8.89" y2="1.778" width="0.3048" layer="1"/>
+<wire x1="8.89" y1="1.778" x2="9.144" y2="2.032" width="0.3048" layer="1"/>
+<wire x1="9.144" y1="2.032" x2="9.144" y2="7.074" width="0.3048" layer="1"/>
+<wire x1="9.144" y1="7.074" x2="8.89" y2="7.328" width="0.3048" layer="1"/>
+</signal>
+<signal name="N$2">
+<contactref element="D1" pad="4"/>
+<contactref element="R2" pad="P$2"/>
+<wire x1="6.35" y1="7.328" x2="6.35" y2="6.35" width="0.3048" layer="1"/>
+<wire x1="6.35" y1="6.35" x2="6.604" y2="6.096" width="0.3048" layer="1"/>
+<wire x1="6.604" y1="6.096" x2="8.128" y2="6.096" width="0.3048" layer="1"/>
+<wire x1="8.128" y1="6.096" x2="8.382" y2="5.842" width="0.3048" layer="1"/>
+<wire x1="8.382" y1="5.842" x2="8.382" y2="3.302" width="0.3048" layer="1"/>
+<wire x1="8.382" y1="3.302" x2="8.128" y2="3.048" width="0.3048" layer="1"/>
+<wire x1="8.128" y1="3.048" x2="7.276" y2="3.048" width="0.3048" layer="1"/>
+<wire x1="7.276" y1="3.048" x2="7.084" y2="2.856" width="0.3048" layer="1"/>
+</signal>
+<signal name="N$3">
+<contactref element="D1" pad="3"/>
+<contactref element="R3" pad="P$2"/>
+<wire x1="7.084" y1="4.256" x2="7.084" y2="5.108" width="0.3048" layer="1"/>
+<wire x1="7.084" y1="5.108" x2="6.858" y2="5.334" width="0.3048" layer="1"/>
+<wire x1="6.858" y1="5.334" x2="4.064" y2="5.334" width="0.3048" layer="1"/>
+<wire x1="4.064" y1="5.334" x2="3.81" y2="5.588" width="0.3048" layer="1"/>
+<wire x1="3.81" y1="5.588" x2="3.81" y2="7.328" width="0.3048" layer="1"/>
+</signal>
+<signal name="N$4">
+<contactref element="R1" pad="P$1"/>
+<contactref element="J1" pad="4"/>
+<wire x1="8.89" y1="13.97" x2="8.89" y2="8.928" width="0.3048" layer="1"/>
+</signal>
+<signal name="N$5">
+<contactref element="J1" pad="2"/>
+<contactref element="R3" pad="P$1"/>
+<wire x1="3.81" y1="13.97" x2="3.81" y2="8.928" width="0.3048" layer="1"/>
+</signal>
+<signal name="N$6">
+<contactref element="J1" pad="3"/>
+<contactref element="R2" pad="P$1"/>
+<wire x1="6.35" y1="13.97" x2="6.35" y2="8.928" width="0.3048" layer="1"/>
+</signal>
+<signal name="GND">
+<polygon width="0.3048" layer="1">
+<vertex x="0" y="15.24"/>
+<vertex x="10.16" y="15.24"/>
+<vertex x="10.16" y="0"/>
+<vertex x="0" y="0"/>
+</polygon>
+<polygon width="0.3048" layer="16">
+<vertex x="0" y="15.24"/>
+<vertex x="10.16" y="15.24"/>
+<vertex x="10.16" y="0"/>
+<vertex x="0" y="0"/>
+</polygon>
+</signal>
+</signals>
+</board>
+</drawing>
+</eagle>
