@@ -13,7 +13,7 @@ class Part:
         return "%s %d" % (self.name, self. frequency)
 
 schematicFiles=[]
-for files in os.listdir("."):
+for files in os.listdir("./schematics/"):
     if files.endswith(".sch"):
         schematicFiles.append(files)
 print schematicFiles
@@ -24,6 +24,7 @@ totalParts=0
 output=open("histogram.csv", "w")
 trend=open("trend.csv", "w")
 for index, file in enumerate(schematicFiles):
+    file="schematics/"+file  # add the schematics folder to the filepath
     handle=open(file, 'r')
     content=handle.read()  #grab the file's content
     try:

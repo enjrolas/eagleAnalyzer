@@ -36,7 +36,7 @@ url="https://github.com/search?q=*+extension%3Abrd&type=Code&ref=searchresults"
 
 
 downloadedFiles=[]
-for files in os.listdir("."):
+for files in os.listdir("./results/"):
     if files.endswith(".html"):
         downloadedFiles.append(files)
 print downloadedFiles        
@@ -45,7 +45,7 @@ for i in range(1,100):
     url="https://github.com/search?p=%d&q=%%2A+extension%%3Abrd&ref=searchresults&type=Code" % (i+1)
     file="%d.html" % i
     if file not in downloadedFiles:
-        download(url, "%d.html"%i)
+        download(url, "results/%d.html"%i)
         time.sleep(10)
 
 rawURL="https://raw.github.com"
@@ -53,11 +53,13 @@ rawURL="https://raw.github.com"
 downloadedFiles=[]
 downloadedBoardFiles=[]
 downloadedSchematicFiles=[]
-for files in os.listdir("."):
+for files in os.listdir("results/"):
     if files.endswith(".html"):
         downloadedFiles.append(files)
+for files in os.listdir("./boards/"):
     if files.endswith(".brd"):
         downloadedBoardFiles.append(files)
+for files in os.listdir("./schematics/"):
     if files.endswith(".sch"):
         downloadedSchematicFiles.append(files)
 print downloadedFiles 
@@ -65,6 +67,7 @@ print downloadedFiles
 boardFiles=[]
 
 for file in downloadedFiles:
+    file="./results/%s" % file
     lines = open(file, "r")
     for line in lines:
         if re.match("(.*)(.brd|.BRD)(.*<br/>*)", line):
@@ -81,11 +84,11 @@ for file in boardFiles:
     schematicFilename=schematicFile.split("/")[-1].replace("%20","_")
     if "eagleAnalyzer" not in file:  # don't get the files that are part of this github repo
         if filename not in downloadedBoardFiles:
-            download(file,filename)
+            download(file,"./boards/%s" % filename)
         else:
             print "already have %s" % filename
         if schematicFilename not in downloadedSchematicFiles:
-            download(schematicFile,schematicFilename)
+            download(schematicFile,"./schematics/%s" % schematicFilename)
         else:
             print "already have %s" % schematicFilename
     
